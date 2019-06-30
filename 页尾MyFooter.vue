@@ -1,5 +1,7 @@
 <template>
   <div>
+    <div class="topline">
+    </div>
     <el-row>
       <el-col :span="4">
         <el-row>
@@ -121,6 +123,10 @@ export default {
 }
 </script>
 <style>
+.topline {
+  height: 5px;
+  background-image: linear-gradient(to right,orange,blue);
+}
  ul {
    list-style:none;
  } 

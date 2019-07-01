@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="margin-top:30px;width:600px;margin:auto;">
+    <div style="margin:1em auto;width:600px;">
       <el-input style="margin-bottom:0px;" placeholder="搜索电影、影院】影人、商品、新闻">
         <el-select v-model="selected" slot="prepend">
           <el-option label="全部" value="1"></el-option>
@@ -15,8 +15,15 @@
     </div>
     <!--轮播图-->
     <el-carousel :interval="5000" arrow="always">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3>{{ item }}</h3>
+      <el-carousel-item>
+        <a href="javascript:;"><img src="../assets/carousel-2.jpg"></a>
+      </el-carousel-item>
+      <el-carousel-item>
+        <a href="javascript:;"><img src="../assets/carousel-3.jpg"></a>
+      </el-carousel-item><el-carousel-item>
+        <a href="javascript:;"><img src="../assets/carousel-7.jpg"></a>
+      </el-carousel-item><el-carousel-item>
+        <a href="javascript:;"><img src="../assets/carousel-8.jpg"></a>
       </el-carousel-item>
     </el-carousel>
   <!--轮播图结束-->
@@ -93,16 +100,18 @@
               </div>
             </el-col>
             <el-col :span="6">
-              <div class="zuijia">
+              <div>
                 <h4>今日推荐</h4>
-                <div>
+                <div class="zuijia"><div>
                   <el-link :underline="false" href="//movie.mtime.com/229843/">
                     <img src="http://img5.mtime.cn/mg/2019/06/26/164119.85642212.jpg" width="290" height="240">
                   </el-link>
                 </div>
-                <el-link class="rightImg" :underline="false" >
+                   <el-link class="rightImg" :underline="false" >
                   <img src="http://img5.mtime.cn/mg/2019/03/15/112525.47323365_1280X720X2.jpg" width="84" height="126" alt="">
-                </el-link>
+                  </el-link>
+                </div>
+               
                 <div class="mcontent">
                   <p>
                     <el-link>
@@ -192,15 +201,19 @@ export default {
     background-color:green;
     color:#fff;
   }
+  .zuijia {
+    position:relative;
+  }
   .rightImg {
-    margin-left:50%;
-    margin-top:-20%;
+    position:absolute;
+    left:12em;
+    top:-5em;
     border:2px solid #fff;
   }
   .mcontent {
     background-color: #fff;
     padding:15px;
-    margin-top:-24%;
+    margin-top:-8.5em;
     width:290px;
     box-shadow: 0 0 10px #aaa;
   }

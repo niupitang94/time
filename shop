@@ -1,0 +1,62 @@
+<template>
+  <div>
+    <div class="topClass">
+      <router-link to=":;">
+        商城首页
+      </router-link>
+      <router-link to=":;">
+        新品
+      </router-link>
+      <div class="topSel">
+        <el-select v-model="select" slot="prepend" class="sel">
+          <el-option label="商品" value="1"></el-option>
+        </el-select>
+        <input type="text" placeholder="按名称、电影、品牌等搜索商品">
+        <el-button slot="append" icon="el-icon-search"></el-button>
+      </div> 
+    </div>
+    <!-- 主面广告图 -->
+    <div class="leftDiv">
+      <div class="leftD">111</div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data(){
+      return {
+        select:"1",
+      }
+    }
+  }
+</script>
+<style scoped>
+body {
+  text-align: center;
+}
+.topClass {
+  display:flex;
+  flex-flow: wrap;
+  margin-top:20px;
+}
+.topClass a {
+  font-size:20px;
+  color:#000;
+  margin:0 40px;
+}
+.sel {
+  width:80px;
+}
+.topSel {
+  margin-left:62%;
+}
+  input {
+    width:50% !important;
+  }
+.leftDiv .leftD {
+  width:50px;
+  height:20px;
+  background-color: #e8e8e8;
+}
+</style>
+
